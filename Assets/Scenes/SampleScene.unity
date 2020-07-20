@@ -2646,6 +2646,7 @@ MonoBehaviour:
   bBackHost: {fileID: 0}
   bBackOptions: {fileID: 0}
   bFind: {fileID: 0}
+  BCreateLobby: {fileID: 0}
 --- !u!114 &1150819921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3992,6 +3993,7 @@ MonoBehaviour:
   bBackHost: {fileID: 2072530453}
   bBackOptions: {fileID: 789245046}
   bFind: {fileID: 800000387}
+  BCreateLobby: {fileID: 1668495394}
 --- !u!1 &1634968642
 GameObject:
   m_ObjectHideFlags: 0

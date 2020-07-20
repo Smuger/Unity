@@ -21,6 +21,7 @@ public class MenuStartScript : MonoBehaviour
     public Button bBackHost;
     public Button bBackOptions;
     public Button bFind;
+    public Button BCreateLobby;
 
     void Start()
     {
@@ -28,7 +29,8 @@ public class MenuStartScript : MonoBehaviour
         bHost.onClick.AddListener(OnClickHostButton);
         bOptions.onClick.AddListener(OnClickOptionsButton);
         bExit.onClick.AddListener(OnClickExitButton);
-        bFind.onClick.AddListener(OnClickFindButton);
+        bFind.onClick.AddListener(OnClickFindButton);;
+        BCreateLobby.onClick.AddListener(OnClickCreateLobbyButton);
 
         bBackJoin.onClick.AddListener(delegate { OnClickBack(joinMenuUI); });
         bBackHost.onClick.AddListener(delegate { OnClickBack(hostMenuUI); });
@@ -77,6 +79,13 @@ public class MenuStartScript : MonoBehaviour
     {
         Debug.Log("Exit");
         Application.Quit();
+    }
+
+    public void OnClickCreateLobbyButton()
+    {
+        hostMenuUI.SetActive(false);
+        Debug.Log("sceneName to load: " + "LobbyScene");
+        SceneManager.LoadScene("LobbyScene");
     }
 
     public void OnClickBack(GameObject activeLayout)
