@@ -1279,7 +1279,7 @@ GameObject:
   - component: {fileID: 800000388}
   - component: {fileID: 800000387}
   m_Layer: 5
-  m_Name: BSeach
+  m_Name: BFind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2645,6 +2645,7 @@ MonoBehaviour:
   bBackJoin: {fileID: 0}
   bBackHost: {fileID: 0}
   bBackOptions: {fileID: 0}
+  bFind: {fileID: 0}
 --- !u!114 &1150819921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3700,7 +3701,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 'Find
+
+'
 --- !u!222 &1491245610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3988,6 +3991,7 @@ MonoBehaviour:
   bBackJoin: {fileID: 1294836408}
   bBackHost: {fileID: 2072530453}
   bBackOptions: {fileID: 789245046}
+  bFind: {fileID: 800000387}
 --- !u!1 &1634968642
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuStartScript : MonoBehaviour
@@ -19,6 +20,7 @@ public class MenuStartScript : MonoBehaviour
     public Button bBackJoin;
     public Button bBackHost;
     public Button bBackOptions;
+    public Button bFind;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class MenuStartScript : MonoBehaviour
         bHost.onClick.AddListener(OnClickHostButton);
         bOptions.onClick.AddListener(OnClickOptionsButton);
         bExit.onClick.AddListener(OnClickExitButton);
+        bFind.onClick.AddListener(OnClickFindButton);
 
         bBackJoin.onClick.AddListener(delegate { OnClickBack(joinMenuUI); });
         bBackHost.onClick.AddListener(delegate { OnClickBack(hostMenuUI); });
@@ -61,6 +64,13 @@ public class MenuStartScript : MonoBehaviour
     {
         mainMenuUI.SetActive(false);
         optionsMenuUI.SetActive(true);
+    }
+
+    public void OnClickFindButton()
+    {
+        joinMenuUI.SetActive(false);
+        Debug.Log("sceneName to load: " + "FirstMap");
+        SceneManager.LoadScene("FirstMap");
     }
 
     public void OnClickExitButton()
